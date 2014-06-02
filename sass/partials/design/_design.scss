@@ -27,7 +27,7 @@ span{
 html {  } 
 
 body {
-  color:#555555;
+  color:$body-text-color;
   font:62.5%/1.5em $basefont;
   }
 
@@ -230,6 +230,7 @@ margin-left: -10px;
 .content-inner #content *, .node-bio p {
 	font-size: .95rem;
 	line-height: 1.6em;
+
 }
 .content-inner p, .node-bio p {
 	font-family: $bodyfont;
@@ -347,6 +348,10 @@ div.litecal .litecal-title h3.litecal-title {
 	margin-left: 1em;
 	font-size: 1em;
 	line-height: 1.5;
+
+	@include breakpoint($mobile-break) { 
+		margin-left: 1em;
+	}
 }
 
 .node-bio p {
@@ -365,14 +370,20 @@ div.litecal .litecal-title h3.litecal-title {
 
 
 .front .content-inner h2.block-title{
-	font-weight: bold !important;
-	color: $text-color;
-	text-transform: none;
-	font-size: 1.4em;
-	font-family: $bodyfont;
-	line-height: 1.5;
-	margin: 0;
-	margin-bottom: .5em;
+		margin: 0;
+		margin-bottom: .5em;
+		color: $text-color;
+		font-family: $bodyfont;
+		font-size: 1.2em;
+		font-weight: bold !important;
+		text-transform: none;
+		line-height: 1.2;
+
+	@include breakpoint($tablet-break) { 
+		font-size: 1.4em;
+		line-height: 1.5;
+ 	
+	}
 }
 
 .item-list ul li {

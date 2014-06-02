@@ -23,7 +23,11 @@
 }
 
 .region.region-header-second{
-	width:70%
+	width: 100%;
+
+	@include breakpoint($tablet-break) { 
+		width:70%;
+	}
 }
 .region.region-header-third{
 	position: absolute;
@@ -88,7 +92,7 @@
   line-height:1em;
   font-style: normal;
   font-family: $headerfont;
-  font-size: 2.75em;
+  font-size: 2.5em;
 
   @include breakpoint($tablet-break) {  
 	font-size: 2.5em;
